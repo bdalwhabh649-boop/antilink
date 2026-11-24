@@ -1,1 +1,17 @@
 
+console.log("Anti-Link Bot Started ✅");
+
+function checkLink(message) {
+  if (message.includes("http") || message.includes("www.") || message.includes("chat.whatsapp")) {
+    return true;
+  }
+  return false;
+}
+
+// مثال للتجربة
+let testMsg = "تعال ادخل https://chat.whatsapp.com/xxx";
+if (checkLink(testMsg)) {
+  console.log("تم اكتشاف رابط! سيتم الحذف");
+} else {
+  console.log("لا يوجد رابط");
+}
